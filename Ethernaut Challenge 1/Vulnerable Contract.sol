@@ -21,7 +21,8 @@ contract Fallback {
         );
         _;
     }
-
+   
+  // version1: unsecure 
   function contribute() public payable {
     require(msg.value < 0.001 ether);
     contributions[msg.sender] += msg.value;
@@ -37,7 +38,9 @@ contract Fallback {
   function withdraw() public onlyOwner {
     owner.transfer(address(this).balance);
   }
-
+  
+    
+  // version2: unsecure - changing owner of contract if user sends ether directly to the contract
   receive() external payable {
     require(msg.value > 0 && contributions[msg.sender] > 0);
     owner = msg.sender;
