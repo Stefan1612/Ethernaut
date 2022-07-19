@@ -9,7 +9,9 @@ contract Token {
   constructor(uint _initialSupply) public {
     balances[msg.sender] = totalSupply = _initialSupply;
   }
-
+  
+   // Solutions/Vulnerability //
+  
   function transfer(address _to, uint _value) public returns (bool) {
     require(balances[msg.sender] - _value >= 0);
     balances[msg.sender] -= _value;
