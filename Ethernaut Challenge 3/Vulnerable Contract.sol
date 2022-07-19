@@ -13,7 +13,13 @@ contract CoinFlip {
   constructor() public {
     consecutiveWins = 0;
   }
-
+  
+   // Solutions/Vulnerability // 
+  // Nothing about the choose Winner function (flip()) is random. You can easily calculate the outcome before calling the function. 
+  // block.number is a public visible, predictable value
+  // the factor value is given
+  // 
+  
   function flip(bool _guess) public returns (bool) {
     uint256 blockValue = uint256(blockhash(block.number.sub(1)));
 
