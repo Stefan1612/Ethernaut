@@ -1,0 +1,10 @@
+// Solution: 
+// Variables even if declared as "private" are never actually private on-chain.
+// There are always ways to read out private data variables
+
+// =>
+// You could e.g. use ethers.js in your frontend to get the variable using:
+// choosing a provider (could be infura)
+// and then "await provider.getStorageAt(address, slot);"
+// slot variable = is the STORAGE slot inside the EVM you want to read out, in our case it would be slot 1.
+// 
