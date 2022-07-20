@@ -4,7 +4,7 @@ pragma solidity ^0.6.0;
 
 // Task: Force send ether into the contract
 // Solution: 
-// Every contract can receive ether forcefully with the "seldestruct" function
+// Every contract can receive ether forcefully using a malicious contract and the "seldestruct" function
 // e.g. =>  
 
 /* 
