@@ -15,7 +15,7 @@ contract Delegate {
 }
 
 
-// sending contract "Delegation" directly ether, we will automatically call the fallback functions inside the contract.
+// sending contract "Delegation" directly ether, will automatically call the fallback functions inside the contract.
 // if we attach the "data" => abi.encodeWithSignature("pwn"), which will result in the function call 
 // => address(delegate).delegatecall(abi.encodeWithSignature("pwn"))
 // We are now calling the function "pwn()" inside contract "Delegate" in the name and with the state variables of contract "Delegation".
