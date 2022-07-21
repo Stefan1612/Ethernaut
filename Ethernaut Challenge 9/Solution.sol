@@ -5,7 +5,7 @@
 // The "King" contract will not be able to send the eth back to the current owner and will be stuck at the current state.
 
 //e.g. Contract =>
-/*
+
 
 interface IKing {
     function prize() external view returns (uint);
@@ -39,4 +39,4 @@ contract malicousContract is IKing{
 }
 
 
-*/
+
