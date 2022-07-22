@@ -10,7 +10,7 @@ contract Telephone {
   }
   
   // Solutions/Vulnerability // 
-  // You can just call the function (changeOwner()) and change owner
+  // You can just call the function (changeOwner()) from another contract and change owner
 
   function changeOwner(address _owner) public {
     if (tx.origin != msg.sender) {
