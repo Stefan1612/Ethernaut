@@ -1,18 +1,30 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
-contract Vault {
-  bool public locked;
-  bytes32 private password;
+import '@openzeppelin/contracts/math/SafeMath.sol';
 
-  constructor(bytes32 _password) public {
-    locked = true;
-    password = _password;
+contract Reentrance {
+  
+  using SafeMath for uint256;
+  mapping(address => uint) public balances;
+
+  function donate(address _to) public payable {
+    balances[_to] = balances[_to].add(msg.value);
   }
 
-  function unlock(bytes32 _password) public {
-    if (password == _password) {
-      locked = false;
+  function balanceOf(address _who) public view returns (uint balance) {
+    return balances[_who];
+  }
+
+  function withdraw(uint _amount) public {
+    if(balances[msg.sender] >= _amount) {
+      (bool result,) = msg.sender.call{value:_amount}("");
+      if(result) {
+        _amount;
+      }
+      balances[msg.sender] -= _amount;
     }
   }
+
+  receive() external payable {}
 }
