@@ -21,7 +21,7 @@ contract Elevator {
   }
 }
 
-
+// contract to set the variable "top" inside Elevator to true
 contract Building {
 
     bool public alreadyCalled = false;
