@@ -5,7 +5,7 @@ Solution:
 
 contract.make_contact();
 
-2. Explanation: Dynamic Arrays are vulnerable too underflow attacks -> if you array.length-- on an array with the value
+2. Explanation: Dynamic Arrays are vulnerable to underflow attacks -> if you array.length-- on an array with the value
 of 0, the array.length will underflow and equal the highest possible value inside the EVM Storage (EVM can store up to 2**256 32bytes inside storage).
 The new array.length wouldn't equal -1, it would equal 2**256 (very large num).
 If the array.length equals all possible storage, you can freely manipulate all data inside the array.
