@@ -16,4 +16,11 @@ The way the compiler usually compiles our solidity code:
 Solidity code -> Opcodes -> Byte Code -> Byte Code is read by the evm
 
 
+Solution code:
+tx = await web3.eth.sendTransaction({from: player, data: "600a600c600039600a6000f3602a60505260206050f3"});
+
+contract.setSolver(tx.address);
+
+
+
 */
