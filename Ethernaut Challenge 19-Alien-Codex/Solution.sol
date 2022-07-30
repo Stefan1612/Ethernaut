@@ -30,5 +30,6 @@ contract.retract();
             (declare hex)   (24, 0's)      (remove 0x from our address)
   content = 0x            + 0.repeat(24) + player.slice(2)
   
-
+  contract.revise(i, content, {from: player, gas:900000);
+  
 */
