@@ -65,6 +65,5 @@ contract AttackWithReentrancy{
 Now set the partner to either of your attack contracts:
 contract.setWithdrawPartner("your contract address");
 
-contract.withdraw()
 
 */
