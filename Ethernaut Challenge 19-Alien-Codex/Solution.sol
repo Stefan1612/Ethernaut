@@ -27,9 +27,10 @@ contract.retract();
   and turn it into an 32bytes large slot and fullfill the array requirements.
   
   
-            (declare hex)   (24, 0's)      (remove 0x from our address)
-  content = 0x            + 0.repeat(24) + player.slice(2)
+            (declare hex)     (24, 0's)        (remove 0x from our address)
+  content = "0x"            + "0".repeat(24) + player.slice(2)
+
   
-  contract.revise(i, content, {from: player, gas:900000);
+  contract.revise(i, content, {from: player, gas:90000});
   
 */
