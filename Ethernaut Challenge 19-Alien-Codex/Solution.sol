@@ -17,7 +17,7 @@ contract.retract();
 3. Find out where the owner variable is inside the array.
   
   
-  find where the first array element is stored
+  find where the first array element is stored (you need to encode the parameters because keccak256 only accepts bytes32 variables)
   
   p = web3.utils.keccak256(web3.eth.abi.encodeParameters(["uint256"], [1] ))
   
