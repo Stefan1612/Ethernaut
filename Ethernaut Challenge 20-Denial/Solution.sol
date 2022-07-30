@@ -60,4 +60,11 @@ contract AttackWithReentrancy{
  // I have covered reentrancy in a challenge before, you can just copy and replace the function names.
 }
 
+
+-----------------------
+Now set the partner to either of your attack contracts:
+contract.setWithdrawPartner("your contract address");
+
+contract.withdraw()
+
 */
