@@ -1,7 +1,7 @@
 /*
 Solidity inability to comprehend floating points (e.g. 24.44444, rounds down to 24) will be abused here.
 
-In the "getSwaapPrice" function the price is calculated by dividing 2 numbers, which would work fine IF solidity was able to work with decimals.
+In the "getSwapPrice" function the price is calculated by dividing 2 numbers, which would work fine IF solidity was able to work with decimals.
 
 Fix: Usually tokenprices are * by their decimals (usually 18).
 
