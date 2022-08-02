@@ -8,7 +8,7 @@ You could "hack" this contract the same way as the contract before (Check dex1)
 
 We use this Option for some variety, another, malicious contract.
 
-
+*/
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
@@ -79,4 +79,4 @@ contract maliciousToken is ERC20{
 }
 
 
-*/
+
