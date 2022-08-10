@@ -1,5 +1,7 @@
 // Solutions/Vulnerability // 
-  // The faul1out() function is not a real constructor and can be called anytime
+
+// The faul1out() function is not a real constructor and can be called anytime
+
 
 
   /* constructor */
