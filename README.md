@@ -8,4 +8,4 @@ Ethernaut Challenges are very well respected advanced Smart contract challenges 
 
 1. locate a vulnerability in a smart contract.
 2. Figure out a solution which could abuse the vulnerability.
-3. Hack/Attack the smart contract/s.
+3. Hack/Attack the smart contract/s with your custom designed malicious code.
