@@ -2,7 +2,7 @@
 
 here are all my already solved Ethernaut challenges.
 
-### Incase you are not familiar with Ethernaut's Challenges:
+### In case you are not familiar with Ethernaut's Challenges:
 
 Ethernaut Challenges are very well respected advanced Smart contract challenges in which you have to:
 
